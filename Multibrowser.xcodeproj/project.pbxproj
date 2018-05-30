@@ -12,6 +12,7 @@
 		6F5B18B920BEFD8600DB5519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F5B18B720BEFD8600DB5519 /* Main.storyboard */; };
 		6F5B18BB20BEFD8900DB5519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F5B18BA20BEFD8900DB5519 /* Assets.xcassets */; };
 		6F5B18BE20BEFD8900DB5519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F5B18BC20BEFD8900DB5519 /* LaunchScreen.storyboard */; };
+		6F5B18C620BEFDA500DB5519 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6F5B18C520BEFDA500DB5519 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6F5B18BA20BEFD8900DB5519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F5B18BD20BEFD8900DB5519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F5B18BF20BEFD8900DB5519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F5B18C520BEFDA500DB5519 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		6F5B18A720BEFD8600DB5519 = {
 			isa = PBXGroup;
 			children = (
+				6F5B18C520BEFDA500DB5519 /* README.md */,
 				6F5B18B220BEFD8600DB5519 /* Multibrowser */,
 				6F5B18B120BEFD8600DB5519 /* Products */,
 			);
@@ -124,6 +127,7 @@
 			files = (
 				6F5B18BE20BEFD8900DB5519 /* LaunchScreen.storyboard in Resources */,
 				6F5B18BB20BEFD8900DB5519 /* Assets.xcassets in Resources */,
+				6F5B18C620BEFDA500DB5519 /* README.md in Resources */,
 				6F5B18B920BEFD8600DB5519 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,15 +285,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Multibrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.forrestwparker.Multibrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forrestwparker.asdf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -298,15 +303,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Multibrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.forrestwparker.Multibrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forrestwparker.asdf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
