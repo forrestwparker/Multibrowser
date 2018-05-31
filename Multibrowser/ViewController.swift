@@ -34,6 +34,25 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate, 
     }
     
     @objc func deleteWebView() {
+        guard let webView = activeWebView else { return }
+        guard let index = stackView.arrangedSubviews.index(of: webView) else { return }
+        
+        stackView.removeArrangedSubview(webView)
+        webView.removeFromSuperview()
+        
+        if stackView.arrangedSubviews.count == 0 {
+            setDefaultTitle()
+        } else {
+            var currentIndex = Int(index)
+            
+            if currentIndex == stackView.arrangedSubviews.count {
+                currentIndex = stackView.arrangedSubviews.count - 1
+            }
+            
+            if let newSelectedWebView = stackView.arrangedSubviews[currentIndex] as? UIWebView {
+                selectWebView(newSelectedWebView)
+            }
+        }
     }
     
     func selectWebView(_ webView: UIWebView) {
@@ -65,7 +84,7 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate, 
         textField.resignFirstResponder()
         return true
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
