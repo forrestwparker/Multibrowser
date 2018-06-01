@@ -62,6 +62,8 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate, 
         
         activeWebView = webView
         webView.layer.borderWidth = 3
+        
+        updateUI(for: webView)
     }
     
     @objc func webViewTapped(_ recognizer: UITapGestureRecognizer) {
@@ -95,5 +97,24 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate, 
         navigationItem.rightBarButtonItems = [delete, add]
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if traitCollection.horizontalSizeClass == .compact {
+            stackView.axis = .vertical
+        } else {
+            stackView.axis = .horizontal
+        }
+    }
+
+    func updateUI(for webView: UIWebView) {
+        title = webView.stringByEvaluatingJavaScript(from: "document.title")
+        addressBar.text = webView.request?.url?.absoluteString ?? ""
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        if webView == activeWebView {
+            updateUI(for: webView)
+        }
+    }
+    
 }
 
